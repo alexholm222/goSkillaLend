@@ -1,0 +1,2072 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Скилла Компаниям</title>
+    <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,300;0,400;0,600;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/output.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="flex justify-between pt-[43px] text-anthracite lg:px-5 sm:pt-5 items-center">
+      <div class="flex gap-8 items-center">
+        <!-- Logo -->
+        <a href="/">
+          <img src="src/assets/logo.png" alt="Logo" />
+        </a>
+       <!--  <div class="lg-min:hidden flex bg-[#000729] bg-opacity-50 rounded-md">
+    
+          <div id="company" class="sm:hidden px-3 py-2 rounded-md cursor-pointer">
+            <a href="#" onclick="changeBackground(event, 'company')">Компаниям</a>
+          </div>
+
+        
+          <div id="executors" class="sm:hidden px-3 py-2 rounded-md cursor-pointer text-white">
+            <a href="#" onclick="changeBackground(event, 'executors')">Исполнителям</a>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Menu Mobile -->
+      <nav
+        id="mobile-menu"
+        class="fixed top-0 bottom-0 left-0 w-[315px] gap-4 justify-center hidden bg-custom-gradient-1 p-4 z-50"
+      >
+        <ul class="flex flex-col gap-4 text-[#B3BADA]">
+          <li class="flex justify-center">
+            <div class="flex  bg-[#000729] bg-opacity-50 rounded-md justify-between w-[250px]">
+              <!-- Компаниям -->
+              <!-- <div id="companyMob" class="px-3 py-2 rounded-md cursor-pointer">
+                <a href="#" onclick="changeBackground(event, 'company')">Компаниям</a>
+              </div> -->
+
+              <!-- Исполнителям -->
+             <!--  <div id="executorsMob" class="px-3 py-2 rounded-md cursor-pointer">
+                <a href="#" onclick="changeBackground(event, 'executors')">Исполнителям</a>
+              </div> -->
+            </div>
+          </li>
+          <!-- <li><a href="#" class="text-xl">Кому полезна платформа</a></li>
+          <li><a href="#" class="text-xl">Возможности</a></li>
+          <li><a href="#" class="text-xl">Отзывы и кейсы</a></li>
+          <li><a href="#" class="text-xl">СМИ и блогерам</a></li>
+          <li><a href="#" class="text-xl">Журнал “Эксперты в самозанятости”</a></li> -->
+          <li>
+            <!-- Демо-версия платформы -->
+            <!-- <div class="px-5 py-2 bg-gray-500 rounded-md">
+              <a href="#">Демо-версия платформы</a>
+            </div> -->
+          </li>
+          <li>
+            <!-- Кнопка входа -->
+            <div class="px-5 py-2 bg-[#000729] rounded-md">
+              <a href="https://go.skilla.ru/login">Вход для заказчиков</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="lg-min:hidden flex gap-8">
+        <!-- Демо-версия платформы -->
+        <!-- <div class="px-5 py-2  bg-[#000729] bg-opacity-50 rounded-md hover:bg-green-400 hover:text-black text-white font-bold">
+          <a href="#">Демо-версия платформы</a>
+        </div> -->
+
+        <!-- Кнопка входа -->
+        <div class="px-5 py-2  bg-[#000729] bg-opacity-50 rounded-md hover:bg-green-400 hover:text-black text-white font-bold">
+          <a href="https://go.skilla.ru/login">Вход для заказчиков</a>
+        </div>
+      </div>
+
+      <!-- Burger menu -->
+      <button id="burger" class="group hidden relative lg-min:block h-5 w-[30px]">
+        <span
+          class="bg-white h-[1px] w-full absolute top-0 left-0 group-[.active]:translate-y-2 group-[.active]:rotate-45 transition-transform"
+        ></span>
+        <span
+          class="bg-white h-[1px] w-full absolute top-1/2 left-0 group-[.active]:opacity-0 transition-opacity"
+        ></span>
+        <span
+          class="bg-white h-[1px] w-full absolute bottom-0 left-0 group-[.active]:-translate-y-[11px] group-[.active]:-rotate-45 transition-transform"
+        ></span>
+      </button>
+    </header>
+
+    <!-- Menu Desktop -->
+    <!-- <nav class="lg-min:hidden mt-10">
+      <ul class="flex gap-6 justify-between text-[#ffffff] text-opacity-70">
+        <li
+          class="relative font-medium font-jost text-[15px] leading-[30px]"
+        >
+          <a href="#" class="text-xl lg:text-lg hover:text-white">Кому полезна платформа</a>
+        </li>
+        <li
+          class="relative font-medium font-jost text-[15px] leading-[30px]"
+        >
+          <a href="#" class="text-xl lg:text-lg hover:text-white">Возможности</a>
+        </li>
+        <li
+          class="relative font-medium font-jost text-[15px] leading-[30px]"
+        >
+          <a href="#" class="text-xl lg:text-lg hover:text-white">Отзывы и кейсы</a>
+        </li>
+        <li
+          class="relative font-medium font-jost text-[15px] leading-[30px]"
+        >
+          <a href="#" class="text-xl lg:text-lg hover:text-white">СМИ и блогерам</a>
+        </li>
+        <li
+          class="relative font-medium font-jost text-[15px] leading-[30px]"
+        >
+          <a href="#" class="text-xl lg:text-lg hover:text-white">Журнал “Эксперты в самозанятости”</a>
+        </li>
+      </ul>
+    </nav> -->
+
+    <!-- Main -->
+    <section class="min-h-[750px]">
+      <div class="grid grid-cols-2 lg-min:grid-cols-1">
+        <div class="pt-24 lg-min:pt-9">
+          <h1 class="text-white text-5xl font-extrabold lg-min:text-2xl">
+            Платформа для бизнеса <br />
+            для профессиональной работы с самозанятыми
+          </h1>
+          <ul class="mt-8 text-white text-[22px] lg-min:text-[20px] font-bold list-none">
+            <li>— Автоматизация документооборота на 100%</li>
+            <li>— Платежи на карты, СПБ и реквизиты</li>
+            <li>— Контроль налоговых рисков</li>
+            <li>— Поддержка 24/7</li>
+          </ul>
+
+
+
+         <!--  <form action="" class="bg-[#000729] bg-opacity-50 p-6 rounded-md mt-14 mb-8 w-fit grid grid-cols-2 gap-x-6 gap-y-4">
+            <input
+              placeholder="+7 (___) ___-__-__"
+              type="tel"
+              class="bg-[#000000] border border-[#ffffff] bg-opacity-20 px-[13px] py-[12.5px] rounded-md text-white placeholder-white"
+            />
+            <button class="p-4 bg-[#00FF88] rounded-md w-full">Отправить</button>
+            <div class="flex gap-8 mt-4">
+              <label class="flex items-center text-[16px] text-[#C7C9D1]">
+              <input type="radio" class="mr-2 custom-radio" name="radio" checked/>
+                Telegram
+              </label>
+              <label class="flex items-center text-[16px] text-[#C7C9D1]">
+                <input type="radio" class="mr-2 custom-radio" name="radio"/>
+                WhatsApp
+              </label>
+              <label class="flex items-center text-[16px] text-[#C7C9D1]">
+                <input type="radio" class="mr-2 custom-radio" name="radio"/>
+                Звонок
+              </label>
+            </div>
+          </form> -->
+
+          <div class="grid grid-cols-3 w-fit">
+            <div>
+              <img src="./src/assets/01.png" alt="" />
+            </div>
+            <div>
+              <img src="./src/assets/03.png" alt="" />
+            </div>
+            <div>
+              <img src="./src/assets/04.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="pt-10">
+          <img src="./src/assets/1-1.png" alt="1-1" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lent -->
+    <section class="absolute left-0 right-0">
+      <div
+        class="max-w-screen h-14 md:h-9 flex justify-center items-center gap-10 md:gap-1.5 p-0.5 box-border transform rotate-0 bg-gradient-to-t from-[#00341c] via-[#007e43] to-[#00361c]"
+      >
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Повторение иконки и текста -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-[750px] pt-36 lg-min:pt-16 lg-min:min-h-[600px]">
+      <div class="grid grid-cols-2 lg-min:grid-cols-1 gap-24 lg-min:gap-0">
+        <div class="flex items-center">
+          <img src="./src/assets/image%209.png" alt="1-1" />
+        </div>
+        <div>
+          <h2 class="text-white text-5xl font-extrabold lg-min:text-2xl">
+            Автоматизируйте
+            работу с исполнителями
+          </h2>
+          <ul class="mt-6 text-white list-none text-[22px] lg-min:text-[20px]">
+            <li>— Формирование, подписание договора и закрывающих документов</li>
+            <li>— Online-онбординг исполнителей</li>
+            <li>— Выплаты исполнителям от 1 мин.</li>
+            <li>— Формирование чеков в ФНС</li>
+            <li>— Поддержка 24/7</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lent -->
+    <section class="absolute left-0 right-0">
+      <div
+        class="max-w-screen h-14 md:h-9 flex justify-center items-center gap-10 md:gap-1.5 p-0.5 box-border transform rotate-0 bg-gradient-to-t from-[#00341c] via-[#007e43] to-[#00361c]"
+      >
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Повторение иконки и текста -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-[750px] pt-36 lg-min:pt-16 lg-min:min-h-[700px]">
+      <div class="grid grid-cols-2 lg-min:grid-cols-1 gap-24 lg-min:gap-0">
+        <div>
+          <h2 class="text-white text-5xl font-extrabold lg-min:text-2xl">
+            Сэкономьте свое время,
+            передав рутину платформе
+          </h2>
+          <p class="mt-6 text-white text-[22px] lg-min:text-[20px]">
+            Скилла — профессиональная экосистема <br />
+            HR-сервисов для компаний с 2010 года
+          </p>
+          <ul class="mt-6 text-white list-none text-[22px] lg-min:text-[20px]">
+            <li>— 75 000 заказчиков на платформе</li>
+            <li>— 400 000 исполнителей</li>
+            <li>— 100+ сотрудников платформы</li>
+          </ul>
+        </div>
+        <div class="flex items-center lg-min:mt-10">
+          <img src="./src/assets/image%2088.png" alt="1-1" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lent -->
+    <section class="absolute left-0 right-0">
+      <div
+        class="max-w-screen h-14 md:h-9 flex justify-center items-center gap-10 md:gap-1.5 p-0.5 box-border transform rotate-0 bg-gradient-to-t from-[#00341c] via-[#007e43] to-[#00361c]"
+      >
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Повторение иконки и текста -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-[750px] pt-36 lg-min:py-16">
+      <div class="grid grid-cols-2 lg-min:grid-cols-1 gap-24 lg-min:gap-0">
+        <div class="flex items-center justify-center lg-min:order-last">
+          <img src="./src/assets/2-6-1.png" alt="1-1" />
+        </div>
+        <div>
+          <h2 class="text-white text-5xl font-extrabold lg-min:text-2xl">
+            Работайте без рисков
+            с юридической экспертизой
+            от профессионалов рынка
+          </h2>
+          <ul class="mt-6 text-white list-none text-[22px] lg-min:text-[20px]">
+            <li>— Контроль за 15 стоп-факторами</li>
+            <li>— Безопасные формы документов</li>
+            <li>— Юридическая поддержка заказчиков</li>
+            <li>
+              — Помощь и консультации в ответах <br />
+              контролирующим органам
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lent -->
+    <section class="absolute left-0 right-0">
+      <div
+        class="max-w-screen h-14 md:h-9 flex justify-center items-center gap-10 md:gap-1.5 p-0.5 box-border transform rotate-0 bg-gradient-to-t from-[#00341c] via-[#007e43] to-[#00361c]"
+      >
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Повторение иконки и текста -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-[750px] pt-48 lg-min:pt-16 lg-min:min-h-[650px]">
+      <div class="grid grid-cols-2 lg-min:grid-cols-1 gap-24 lg-min:gap-0">
+        <div>
+          <h2 class="text-white text-5xl font-extrabold lg-min:text-2xl">
+            Только позитивная обратная связь от сотен пользователей платформы Скилла
+          </h2>
+          <p class="mt-6 text-white text-[22px] lg-min:text-[20px]">
+            Скилла помогает компаниям и предпринимателям безопасно зарабатывать и снижать операционные затраты
+          </p>
+        </div>
+        <div class="grid grid-cols-3 gap-6 lg-min:mt-4">
+          <div>
+            <!--<a href="">-->
+            <img
+              data-video="video-container-1"
+              src="./src/assets/1.jpg"
+              alt="1-1"
+              class="cursor-pointer video-trigger"
+            />
+            <div id="video-container-1" class="hidden">
+              <iframe
+                class="w-fit"
+                src="https://rutube.ru/play/embed/7feefc4088636d80c58dda57d0fbb7f4/"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <p class="text-sm text-white font-bold">«Мы действительно как одна ...</p>
+            <p class="text-[#818598] text-xs">Алексей Адаменко</p>
+            <!--</a>-->
+          </div>
+          <div>
+            <!--<a href="">-->
+            <img
+              data-video="video-container-2"
+              src="./src/assets/2.jpg"
+              alt="1-1"
+              class="cursor-pointer video-trigger"
+            />
+            <div id="video-container-2" class="hidden">
+              <iframe
+                class="w-fit"
+                src="https://rutube.ru/play/embed/176153a15a9b332e211d447749d370f7/"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <p class="text-sm text-white font-bold">«С такими инструментами оче...</p>
+            <p class="text-[#818598] text-xs">Алексей Солдатенко</p>
+            <!--</a>-->
+          </div>
+          <div>
+            <!--<a href="">-->
+            <img
+              data-video="video-container-3"
+              src="./src/assets/3.jpg"
+              alt="1-1"
+              class="cursor-pointer video-trigger"
+            />
+            <div id="video-container-3" class="hidden">
+              <iframe
+                class="w-fit"
+                src="https://rutube.ru/play/embed/82facee95df192af92720cde0e825451/"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <p class="text-sm text-white font-bold">«Практически купил Инфинити...</p>
+            <p class="text-[#818598] text-xs">Алексей Соломин</p>
+            <!--</a>-->
+          </div>
+          <div>
+            <!--<a href="">-->
+            <img
+              data-video="video-container-4"
+              src="./src/assets/4.jpg"
+              alt="1-1"
+              class="cursor-pointer video-trigger"
+            />
+            <div id="video-container-4" class="hidden">
+              <iframe
+                class="w-fit"
+                src="https://rutube.ru/play/embed/0bed3f10ebfa87442b813e4f2f36c8d5/"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <p class="text-sm text-white font-bold">«Это мой первый бизнес, нач...</p>
+            <p class="text-[#818598] text-xs">Артем Калистратов</p>
+            <!--</a>-->
+          </div>
+          <div>
+            <!--<a href="">-->
+            <img
+              data-video="video-container-5"
+              src="./src/assets/5.jpg"
+              alt="1-1"
+              class="cursor-pointer video-trigger"
+            />
+            <div id="video-container-5" class="hidden">
+              <iframe
+                class="w-fit"
+                src="https://rutube.ru/play/embed/9bf18f97c357d8abc5b1364122baad46/"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <p class="text-sm text-white font-bold">«Бизнес – это прикольненько...</p>
+            <p class="text-[#818598] text-xs">Артур Утенков</p>
+            <!--</a>-->
+          </div>
+          <div
+            class="bg-custom-gradient-2 p-8 text-white text-2xl lg-min:text-xs h-[155px] lg-min:h-[89px] lg-min:p-3 flex items-center"
+          >
+            <a href="">Смотреть все отзывы партнеров</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lent -->
+    <section class="absolute left-0 right-0">
+      <div
+        class="max-w-screen h-14 md:h-9 flex justify-center items-center gap-10 md:gap-1.5 p-0.5 box-border transform rotate-0 bg-gradient-to-t from-[#00341c] via-[#007e43] to-[#00361c]"
+      >
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Повторение иконки и текста -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-[850px] pt-36 lg-min:py-16 lg-min:min-h-[700px]">
+      <div class="grid grid-cols-2 lg-min:grid-cols-1 gap-24 lg-min:gap-0">
+        <div class="flex flex-col items-center justify-center lg-min:order-last lg-min:mt-10">
+          <img src="./src/assets/image%20448.png" alt="1-1" />
+          <img src="./src/assets/цдп%20(боковые%20экраны)%20копия%201%201.png" alt="1-1" />
+        </div>
+        <div>
+          <h2 class="text-white text-5xl font-extrabold lg-min:text-2xl">
+            Делимся экспертизой на десятках ежегодных мероприятий
+          </h2>
+          <p class="mt-6 text-white text-[22px] lg-min:text-[20px]">
+            Мероприятия для компаний из разных сфер: директоров, финансовых управляющих, бухглатерии, юристов
+          </p>
+          <ul class="mt-6 text-white list-none text-[22px] lg-min:text-[20px]">
+            <li>— Бизнес-завтраки и мини-встречи</li>
+            <li>— Zoom-занятия о самозанятости</li>
+            <li>— Разборы кейсов по сферам деятельности</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lent -->
+    <section class="absolute left-0 right-0">
+      <div
+        class="max-w-screen h-14 md:h-9 flex justify-center items-center gap-10 md:gap-1.5 p-0.5 box-border transform rotate-0 bg-gradient-to-t from-[#00341c] via-[#007e43] to-[#00361c]"
+      >
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Повторение иконки и текста -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-[650px] pt-36 lg-min:pt-16 lg-min:min-h-[700px]">
+      <div class="grid grid-cols-2 lg-min:grid-cols-1 gap-24 lg-min:gap-0">
+        <div>
+          <h2 class="text-white text-5xl font-extrabold lg-min:text-2xl">
+            Платформа, аккредитованная <br />
+            Министерством цифрового развития РФ
+          </h2>
+          <ul class="mt-6 text-white list-none text-[22px] lg-min:text-[20px]">
+            <li>— Технологический партнер Налоговой инспекции РФ</li>
+            <li>— Разработчик из реестра Российского ПО</li>
+            <li>— Поддержка исполнителей 24/7</li>
+            <li>— Поддержка заказчиков 24/7</li>
+            <li>— Контроль безопасности платежей</li>
+          </ul>
+        </div>
+        <div class="flex items-center lg-min:mt-10">
+          <img
+            data-video="video-container-6"
+            src="./src/assets/12.png"
+            alt="1-1"
+            class="cursor-pointer video-trigger"
+          />
+          <div id="video-container-6" class="hidden w-full h-full flex justify-center items-center">
+            <iframe
+              class="w-3/4 h-3/4"
+              src="https://rutube.ru/play/embed/12a4820d667ce5ab3e8c89963e19dbc8/"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lent -->
+    <section class="absolute left-0 right-0">
+      <div
+        class="max-w-screen h-14 md:h-9 flex justify-center items-center gap-10 md:gap-1.5 p-0.5 box-border transform rotate-0 bg-gradient-to-t from-[#00341c] via-[#007e43] to-[#00361c]"
+      >
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Повторение иконки и текста -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-[850px] pt-36 lg-min:py-16 lg-min:min-h-[700px]">
+      <div class="grid grid-cols-2 lg-min:grid-cols-1 gap-24 lg-min:gap-0">
+        <div class="flex flex-col items-center justify-center lg-min:order-last mt-24 lg-min:mt-10">
+          <img src="./src/assets/illustration-transformed.png" alt="1-1" />
+        </div>
+        <div>
+          <h2 class="text-white text-5xl font-extrabold lg-min:text-2xl">
+            Делимся экспертизой на десятках ежегодных мероприятий
+          </h2>
+          <p class="mt-6 text-white text-[22px] lg-min:text-[20px]">
+            Мероприятия для компаний из разных сфер: директоров, финансовых управляющих, бухглатерии, юристов
+          </p>
+          <ul class="mt-6 text-white list-none text-[22px] lg-min:text-[20px]">
+            <li>— Бизнес-завтраки и мини-встречи</li>
+            <li>— Zoom-занятия о самозанятости</li>
+            <li>— Разборы кейсов по сферам деятельности</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lent -->
+    <section class="absolute left-0 right-0">
+      <div
+        class="max-w-screen h-14 md:h-9 flex justify-center items-center gap-10 md:gap-1.5 p-0.5 box-border transform rotate-0 bg-gradient-to-t from-[#00341c] via-[#007e43] to-[#00361c]"
+      >
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Повторение иконки и текста -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-[1500px] pt-36 lg-min:py-16 lg-min:min-h-[700px]">
+      <div class="mb-14">
+        <h2 class="text-white text-5xl font-extrabold lg-min:text-2xl">Узнай больше про Скилла Работа</h2>
+        <ul class="mt-6 text-white list-none text-[22px] lg-min:text-[20px]">
+          <li>— Экспертные мнения для СМИ</li>
+          <li>— Открытые онлайн-уроки про самозанятость</li>
+          <li>— Понемногу об HR-tech и Fin-tech</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 lg-min:grid-cols-2 md:grid-cols-1 gap-5 lg-min:gap-4">
+        <a
+          target="blank"
+          href="https://repinlife.ru/teper-bez-whatsapp-alternativy-inostrannym-messendzheram/"
+          class="flex flex-col bg-[#000729] border-[#303550] border-[1px] rounded-lg p-8 hover:bg-[#303550]"
+        >
+          <div>
+            <div class="flex justify-between mb-8">
+              <img src="./src/assets/logo_rep.png" alt="logo_rep" />
+              <p class="text-[#abadba] text-[18px]">10.03.2023</p>
+            </div>
+            <div class="mb-4 text-[22px] text-[#C7C9D1]">
+              <p class="font-semibold mb-4">Новый мессенджер для разнорабочих.</p>
+              <p class="font-normal">
+                Для исполнителей повышается прозрачность работы: время прибытия на заказ и ухода с
+                него фиксируется GPS-метками, график работы исполнитель назначает сам в
+                приложении.
+              </p>
+            </div>
+            <div class="flex items-center text-[#676B71]">
+              <button class="text-[#C7C9D1] text-[18px]">Читать далее</button>
+
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34315 6.3424V8.33644L14.2415 8.34351L5.63604 16.949L7.05025 18.3632L15.6557 9.75773L15.6628 17.6561H17.6569V6.3424H6.34315Z"
+                  fill="#676B7E"
+                />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <a
+          target="blank"
+          href="https://vc.ru/u/1411465-kirill-uporov/748029-budni-razrabotchika-sozdaem-ekosistemu-kotoraya-prinosit-3-5-yarda-v-god-i-ne-shodim-s-uma-ot-api-nalogovoy"
+          class="flex flex-col bg-[#000729] border-[#303550] border-[1px] rounded-lg p-8 hover:bg-[#303550]"
+        >
+          <div>
+            <div class="flex justify-between mb-8">
+              <img src="./src/assets/logo_vc.png" alt="logo_rep" />
+              <p class="text-[#abadba] text-[18px]">05.07.2023</p>
+            </div>
+            <div class="mb-4 text-[22px] text-[#C7C9D1]">
+              <p class="font-semibold mb-4">Будни разработчика: создаем экосистему, которая приносит 3,5 ярда в год, и не
+                сходим с ума от API налоговой</p>
+              <p class="font-normal">
+                Почему мы решили стать полноценной площадкой и делать выплаты самозанятым.
+              </p>
+            </div>
+            <div class="flex items-center text-[#676B71]">
+              <button class="text-[#C7C9D1] text-[18px]">Читать далее</button>
+
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34315 6.3424V8.33644L14.2415 8.34351L5.63604 16.949L7.05025 18.3632L15.6557 9.75773L15.6628 17.6561H17.6569V6.3424H6.34315Z"
+                  fill="#676B7E"
+                />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <a
+          target="blank"
+          href="https://vc.ru/growth/629414-kak-v-sfere-uslug-dostigat-80-konversii-v-prodazhu-i-99-v-zapis-na-sobesedovanie-na-primere-skilla-kontakt"
+          class="flex flex-col bg-[#000729] border-[#303550] border-[1px] rounded-lg p-8 hover:bg-[#303550]"
+        >
+          <div>
+            <div class="flex justify-between mb-8">
+              <img src="./src/assets/logo_vc.png" alt="logo_rep" />
+              <p class="text-[#abadba] text-[18px]">13.06.2023</p>
+            </div>
+            <div class="mb-4 text-[22px] text-[#C7C9D1]">
+              <p class="font-semibold mb-4">Как в сфере услуг достигать 80% конверсии в продажу и 99% в запись на
+                собеседование — на примере Скилла Контакт</p>
+              <p class="font-normal">
+                Цель любых контактов с заказчиками – повышение конверсии. После внедрения КЦ у
+                предпринимателей, как и ожидалось, начала расти выручка из-за роста конверсии,
+                расти прибыль из-за применения гибких тарифов.
+              </p>
+            </div>
+            <div class="flex items-center text-[#676B71]">
+              <button class="text-[#C7C9D1] text-[18px]">Читать далее</button>
+
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34315 6.3424V8.33644L14.2415 8.34351L5.63604 16.949L7.05025 18.3632L15.6557 9.75773L15.6628 17.6561H17.6569V6.3424H6.34315Z"
+                  fill="#676B7E"
+                />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <a
+          target="blank"
+          href="https://vc.ru/growth/627594-kak-zapusk-mobilnogo-prilozheniya-skilla-rabota-prevratilsya-iz-fakapa-v-proryv-i-izmenil-rasklad-sil-na-rynke-v-300-mlrd"
+          class="flex flex-col bg-[#000729] border-[#303550] border-[1px] rounded-lg p-8 hover:bg-[#303550]"
+        >
+          <div>
+            <div class="flex justify-between mb-8">
+              <img src="./src/assets/logo_vc.png" alt="logo_rep" />
+              <p class="text-[#abadba] text-[18px]">07.03.2023</p>
+            </div>
+            <div class="mb-4 text-[22px] text-[#C7C9D1]">
+              <p class="font-semibold mb-4">Как запуск мобильного приложения Скилла Работа превратился из факапа в прорыв и
+                изменил расклад сил на рынке в 300 млрд.</p>
+              <p class="font-normal">
+                Приложение значительно повышает лояльность исполнителей к компаниям партнеров.
+                Каждый третий приходящий исполнитель отмечает технологичность, которая отличает
+                нас от его предыдущего места работы.
+              </p>
+            </div>
+            <div class="flex items-center text-[#676B71]">
+              <button class="text-[#C7C9D1] text-[18px]">Читать далее</button>
+
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34315 6.3424V8.33644L14.2415 8.34351L5.63604 16.949L7.05025 18.3632L15.6557 9.75773L15.6628 17.6561H17.6569V6.3424H6.34315Z"
+                  fill="#676B7E"
+                />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <a
+          target="blank"
+          href="https://www.avito.ru/blog/raznorabochie-i-gruzchiki"
+          class="flex flex-col bg-[#000729] border-[#303550] border-[1px] rounded-lg p-8 hover:bg-[#303550]"
+        >
+          <div>
+            <div class="flex justify-between mb-8">
+              <img src="./src/assets/logo_avito.png" alt="logo_rep" />
+              <p class="text-[#abadba] text-[18px]">14.12.2020</p>
+            </div>
+            <div class="mb-4 text-[22px] text-[#C7C9D1]">
+              <p class="font-semibold mb-4">Как бизнесу продвигать услуги разнорабочих на Авито</p>
+              <p class="font-normal">
+                Специалисты Скилла накопили большой опыт работы с Авито. Они помогли десяткам
+                компаний по поиску разнорабочих освоить сервис и рекомендуют искать там клиентов
+                всем новым партнёрам. В статье они поделятся советами, как это делать.
+              </p>
+            </div>
+            <div class="flex items-center text-[#676B71]">
+              <button class="text-[#C7C9D1] text-[18px]">Читать далее</button>
+
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34315 6.3424V8.33644L14.2415 8.34351L5.63604 16.949L7.05025 18.3632L15.6557 9.75773L15.6628 17.6561H17.6569V6.3424H6.34315Z"
+                  fill="#676B7E"
+                />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <a
+          target="blank"
+          href="https://spb.aif.ru/society/people/ekskursiya_po_ofisu_skilla?ysclid=lbyv2856az783259107"
+          class="flex flex-col bg-[#000729] border-[#303550] border-[1px] rounded-lg p-8 hover:bg-[#303550]"
+        >
+          <div>
+            <div class="flex justify-between mb-8">
+              <img src="./src/assets/logo_argymenty-i-facty.png" alt="logo_rep" />
+              <p class="text-[#abadba] text-[18px]">29.03.2019</p>
+            </div>
+            <div class="mb-4 text-[22px] text-[#C7C9D1]">
+              <p class="font-semibold mb-4">Как выглядят офисы современных IT-компаний. Экскурсия по офису Скилла</p>
+              <p class="font-normal">
+                Офис компании Скилла, расположен в 10 минутах ходьбы от метро «Ладожская» – в
+                бизнес-центре класса Б+. Помещение класса А+ площадью 300 квадратных метров в
+                стиле «лофт», по дизайну и принципу организации похоже на офис «Яндекса» или
+                «Лаборатории Касперского».
+              </p>
+            </div>
+            <div class="flex items-center text-[#676B71]">
+              <button class="text-[#C7C9D1] text-[18px]">Читать далее</button>
+
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34315 6.3424V8.33644L14.2415 8.34351L5.63604 16.949L7.05025 18.3632L15.6557 9.75773L15.6628 17.6561H17.6569V6.3424H6.34315Z"
+                  fill="#676B7E"
+                />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Lent -->
+    <section class="absolute left-0 right-0">
+      <div
+        class="max-w-screen h-14 md:h-9 flex justify-center items-center gap-10 md:gap-1.5 p-0.5 box-border transform rotate-0 bg-gradient-to-t from-[#00341c] via-[#007e43] to-[#00361c]"
+      >
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="text-white text-lg md:text-xs font-medium text-center">Просто работай</div>
+
+        <!-- Повторение иконки и текста -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Лого -->
+        <div class="flex items-center w-40 h-9 md:w-20 md:h-9">
+          <img src="./src/assets/logo-lent.svg" alt="Logo" class="w-full h-full" />
+        </div>
+
+        <!-- Иконка -->
+        <div class="flex justify-center items-center w-8 h-8">
+          <div class="w-6 h-4 flex justify-center items-center">
+            <svg
+              fill="#fff"
+              width="16px"
+              height="16px"
+              viewBox="0 0 0.3 0.3"
+              xmlns="http://www.w3.org/2000/svg"
+              id="arrow"
+            >
+              <path
+                d="M0.166 0.046a0.02 0.02 0 0 1 0.028 0l0.09 0.09a0.02 0.02 0 0 1 0 0.028l-0.09 0.09a0.02 0.02 0 0 1 -0.028 -0.028L0.22 0.17H0.03a0.02 0.02 0 0 1 0 -0.04H0.22L0.166 0.074a0.02 0.02 0 0 1 0 -0.028"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main -->
+    <section class="min-h-[750px]">
+      <div class="grid grid-cols-2 lg-min:grid-cols-1">
+        <div class="pt-24 lg-min:pt-9">
+          <h2 class="text-white text-5xl font-extrabold lg-min:text-2xl">
+            Закажите демонстрацию <br> возможностей платформы Скилла
+          </h2>
+          <p class="mt-6 text-white text-[22px] lg-min:text-[20px]">
+            Подключим платформу за 1 час. Выплаты <br> исполнителям можно проводить сразу же. Начните работать прямо сегодня
+          </p>
+
+         <!--  <form action="" class="bg-[#000729] bg-opacity-50 p-6 rounded-md mt-14 mb-8 w-fit grid grid-cols-2 gap-x-6 gap-y-4">
+            <input
+              placeholder="+7 (___) ___-__-__"
+              type="tel"
+              class="bg-[#000000] border border-[#ffffff] bg-opacity-20 px-[13px] py-[12.5px] rounded-md text-white placeholder-white"
+            />
+            <button class="p-4 bg-[#00FF88] rounded-md w-full">Отправить</button>
+            <div class="flex gap-8 mt-4">
+              <label class="flex items-center text-[16px] text-[#C7C9D1]">
+                <input type="radio" class="mr-2 custom-radio" name="radio" checked/>
+                Telegram
+              </label>
+              <label class="flex items-center text-[16px] text-[#C7C9D1]">
+                <input type="radio" class="mr-2 custom-radio" name="radio"/>
+                WhatsApp
+              </label>
+              <label class="flex items-center text-[16px] text-[#C7C9D1]">
+                <input type="radio" class="mr-2 custom-radio" name="radio"/>
+                Звонок
+              </label>
+            </div>
+          </form> -->
+
+          <div class="grid grid-cols-3 w-fit">
+            <div>
+              <img src="./src/assets/01.png" alt="" />
+            </div>
+            <div>
+              <img src="./src/assets/03.png" alt="" />
+            </div>
+            <div>
+              <img src="./src/assets/04.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="pt-10">
+          <img src="./src/assets/customer2.png" alt="1-1" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white p-6 absolute left-0 right-0">
+      <div class="container mx-auto">
+        <!-- Desktop Layout -->
+        <div class="md:hidden grid grid-cols-4 gap-6">
+          <!-- Left Section -->
+          <div>
+            <div class="flex items-center mb-4">
+              <h2 class="text-yellow-300 text-xl font-bold">Скилла</h2>
+              <h2 class="bg-purple-500 text-white text-xl font-bold ml-1 px-2 rounded">Работа</h2>
+            </div>
+            <div>
+              <h5 class="text-[18px] font-bold">Привлекательный работодатель 2023</h5>
+              <div class="flex gap-6 mt-3">
+                <div>
+                <img src="./src/assets/hhFinall.jpg" alt="" width="160px"  class="rounded-md">
+                </div>
+                <div class="flex items-end">
+                <img src="./src/assets/light.svg" alt="" width="170px" height="114px">
+                </div>
+              </div>
+            </div>
+            <ul class="space-y-3 font-bold text-[14px] md:text-sm text-[#abadba] mt-6">
+              <li><a href="#" class="hover:text-white">Политика конфиденциальности</a></li>
+              <li><a href="#" class="hover:text-white">Пользовательское соглашение</a></li>
+            </ul>
+          </div>
+
+          <!-- Заказчикам Section -->
+          <div>
+            <h3 class="text-white font-bold text-[18px] md:text-sm mb-6">Заказчикам</h3>
+            <ul class="text-[16px] space-y-2 text-[#abadba]">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Аутстаффинг и аутсорсинг</a></li>
+              <li><a href="#">Онлайн-обучение</a></li>
+              <li><a href="#">Строительным компаниям</a></li>
+              <li><a href="#">Маркетинговым агентствам</a></li>
+              <li><a href="#">Клининг</a></li>
+              <li><a href="#">Блогерам</a></li>
+              <li><a href="#">Юристам</a></li>
+              <li><a href="#">Бухгалтерам</a></li>
+              <li><a href="#">Массовые выплаты</a></li>
+              <li class="pb-10"><a href="#">Платежи самозанятым</a></li>
+              <li><a href="#">Регистрация заказчика</a></li>
+              <li><a href="#">Вход в ЛК заказчика</a></li>
+            </ul>
+          </div>
+
+          <!-- Самозанятым Section -->
+          <div>
+            <h3 class="text-white font-bold text-[18px] md:text-sm mb-6">Самозанятым</h3>
+            <ul class="text-[16px] space-y-2 text-[#abadba]">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Виды заказов</a></li>
+              <li><a href="#">Отзывы исполнителей</a></li>
+              <li><a href="#">Какие бывают заказчики</a></li>
+              <li><a href="#">Вопрос-ответ</a></li>
+              <li><a href="#">Скачать приложение</a></li>
+              <li><a href="#">Стать исполнителем</a></li>
+            </ul>
+            <ul class="text-[20px] md:text-sm space-y-3 mt-8 text-[#abadba]">
+              <li><a href="#">СМИ и блогерам</a></li>
+              <li><a href="#">Журнал</a></li>
+              <li><a href="#">Карьера в Скилла</a></li>
+              <li><a href="#">Юридические документы</a></li>
+            </ul>
+          </div>
+
+          <!-- Отзывы Section -->
+          <div>
+            <h3 class="text-white font-bold text-[18px] md:text-sm mb-6">Отзывы про Скилла Работа</h3>
+            <ul class="text-[16px] space-y-2 text-[#abadba]">
+              <li><a href="#">Короткие видео-отзывы</a></li>
+              <li><a href="#">Большие интервью предпринимателей</a></li>
+              <li><a href="#">Кейсы про Скилла IS</a></li>
+            </ul>
+            <ul class="text-[20px] md:text-sm space-y-3 mt-8 text-[#abadba]">
+              <li><a href="https://go.skilla.ru" class="hover:text-white">ЛК Заказчика: go.skilla.ru</a></li>
+              <li><a href="https://lk.skilla.ru" class="hover:text-white">ЛК Партнера: lk.skilla.ru</a></li>
+            </ul>
+          </div>
+
+          <!-- Additional Links -->
+          <div>
+
+          </div>
+        </div>
+
+        <!-- Mobile Accordion Layout -->
+        <div class="hidden md:block">
+          <!-- Left Section -->
+          <div class="mb-4">
+            <div class="flex items-center mb-4">
+              <h2 class="text-white text-xl font-bold">Скилла</h2>
+              <h2 class="bg-purple-500 text-white text-xl font-bold ml-1 px-2 rounded">Работа</h2>
+            </div>
+            <div>
+              <h5 class="text-[18px] font-bold">Привлекательный работодатель 2023</h5>
+              <div class="flex gap-6 mt-3">
+                <div>
+                  <img src="./src/assets/hhFinall.jpg" alt="" width="160px"  class="rounded-md">
+                </div>
+                <div class="flex items-end">
+                  <img src="./src/assets/light.svg" alt="" width="170px" height="114px">
+                </div>
+              </div>
+            </div>
+            <ul class="space-y-2 text-[#abadba]">
+              <li><a href="#" class="hover:text-white">Политика конфиденциальности</a></li>
+              <li><a href="#" class="hover:text-white">Пользовательское соглашение</a></li>
+            </ul>
+          </div>
+
+          <!-- Accordion Sections -->
+          <div>
+            <!-- Accordion for "Заказчикам" -->
+            <button class="accordion-button w-full text-left py-2 text-white font-bold flex justify-between items-center" onclick="toggleAccordion('accordion-1')">
+              Заказчикам
+              <span class="arrow transform transition-transform duration-300">▼</span>
+            </button>
+            <div id="accordion-1" class="hidden space-y-2 text-[#abadba]">
+              <ul class="text-sm space-y-1">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Доставка</a></li>
+                <!-- Other items from Заказчикам -->
+              </ul>
+            </div>
+
+            <!-- Accordion for "Самозанятым" -->
+            <button class="accordion-button w-full text-left py-2 text-white font-bold flex justify-between items-center" onclick="toggleAccordion('accordion-2')">
+              Самозанятым
+              <span class="arrow transform transition-transform duration-300">▼</span>
+            </button>
+            <div id="accordion-2" class="hidden space-y-2">
+              <ul class="text-sm space-y-1 text-[#abadba]">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Виды заказов</a></li>
+                <!-- Other items from Самозанятым -->
+              </ul>
+            </div>
+
+            <!-- Accordion for "Отзывы про Скилла Работа" -->
+            <button class="accordion-button w-full text-left py-2 text-white font-bold flex justify-between items-center" onclick="toggleAccordion('accordion-3')">
+              Отзывы про Скилла Работа
+              <span class="arrow transform transition-transform duration-300">▼</span>
+            </button>
+            <div id="accordion-3" class="hidden space-y-2">
+              <ul class="text-sm space-y-1 text-[#abadba]">
+                <li><a href="#">Короткие видео-отзывы</a></li>
+                <li><a href="#">Большие интервью предпринимателей</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="flex flex-col justify-start md:text-xs text-[#abadba]">
+          <div>
+          <p class="flex justify-end">Скилла © 2010-<span id="currentYear"></span>Копирование информации запрещено </p>
+          <p class="flex justify-end">Скилла — зарегистрированный товарный знак, номер свидетельства 771589</p>
+          <p class="flex justify-end">ООО «Скилла Инновации» ИНН 4706050219</p>
+          <p class="flex justify-end">Санкт-Петербург, пр. Энергетиков, д.10, оф.416 hi@skilla.ru</p>
+          <p class="flex justify-end">Информация на данном сайте носит информационный характер и не является офертой. ст.437 ч. 1 ГК РФ. </p>
+          </div>
+        </div>
+      </div>
+        <div class="grid grid-cols-3 w-fit mx-auto mt-8">
+          <div>
+            <img src="./src/assets/01.png" alt="" />
+          </div>
+          <div>
+            <img src="./src/assets/03.png" alt="" />
+          </div>
+          <div>
+            <img src="./src/assets/04.png" alt="" />
+          </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>

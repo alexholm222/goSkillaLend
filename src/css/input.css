@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        /*@apply font-jost;*/
+        @apply max-w-[1700px] mx-auto bg-custom-gradient-1 bg-cover bg-no-repeat bg-center h-full px-4 lg:text-lg;
+    }
+
+    .custom-radio {
+        @apply h-4 w-4 appearance-none rounded-full border border-gray-300;
+    }
+
+    .custom-radio:checked {
+        @apply border border-green-300;
+    }
+
+    .custom-radio:checked::before {
+        content: "";
+        @apply flex mt-[0.2rem] mx-auto w-2 h-2 rounded-full bg-green-300; /* Изменил цвет и удалил bg-transparent */
+    }
+
+    /*.custom-radio:focus {
+        @apply outline-none ring-2 ring-green-300 ring-offset-2;
+    }*/
+}
